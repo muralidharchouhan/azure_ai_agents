@@ -1,0 +1,17 @@
+rm -r ai-agents -f
+git clone https://github.com/MicrosoftLearning/mslearn-ai-agents ai-agents
+
+cd ai-agents/Labfiles/03b-build-multi-agent-solution/Python
+ls -a -l
+
+python -m venv labenv
+./labenv/bin/Activate.ps1
+pip install -r requirements.txt azure-ai-projects
+
+code .env
+
+code agent_triage.py
+
+az login
+
+python agent_triage.py
