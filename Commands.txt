@@ -1,0 +1,19 @@
+rm -r ai-agents -f
+git clone https://github.com/muralidharchouhan/azure_ai_agents.git ai-agents
+
+cd ai-agents
+ls -a -l
+
+python -m venv labenv
+./labenv/bin/Activate.ps1
+pip install -r requirements.txt
+
+code .env
+
+code agent_triage.py
+code agent-workflow.py
+
+az login
+
+python agent_triage.py
+python agent-workflow.py
