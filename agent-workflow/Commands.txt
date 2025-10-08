@@ -1,0 +1,17 @@
+rm -r ai-agents -f
+git clone https://github.com/muralidharchouhan/azure_ai_agents.git ai-agents
+
+cd ai-agents/agent-workflow
+ls -a -l
+
+python -m venv labenv
+./labenv/bin/Activate.ps1
+pip install azure-identity agent-framework
+
+code .env
+
+code agent.py
+
+az login
+
+python agent.py
